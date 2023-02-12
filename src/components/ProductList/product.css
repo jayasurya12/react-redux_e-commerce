@@ -1,0 +1,5 @@
+.box {
+    height: 200px;
+    /* background-color: #7effb2; */
+    flex: 1 0 200px;
+}
