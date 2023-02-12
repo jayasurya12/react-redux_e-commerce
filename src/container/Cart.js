@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
+  const navigate = useNavigate();
   const list = useSelector((state)=> state.cart.list);
   const dispatch = useDispatch();
 
@@ -23,8 +24,7 @@ const Cart = () => {
   const removeItemCart = (item)=>{
     dispatch(removeItem(item))
   };
-console.log(list)
-  const navigate = useNavigate();
+
   return (
     <>
       {
@@ -32,7 +32,7 @@ console.log(list)
           <>
             {list.map((item) => 
             (<ProductListItem
-              {...item} 
+              {...item.payload} 
               key={item.payload.id} 
               incrementItem={()=>incrementItem(item)} 
               decrementItem={()=>decrementItem(item)}
