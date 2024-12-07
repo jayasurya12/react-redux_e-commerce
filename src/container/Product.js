@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Product = () => {
     
-    const [alert, setAlert] =useState(false);
+    const [alert, setAlert] = useState(false);
     const params = useParams();
     const props = productList.find((item) => item.id === parseInt(params.id));
     console.log(props)

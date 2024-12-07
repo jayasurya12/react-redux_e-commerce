@@ -2,7 +2,8 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Index = (props) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+
   return (
     <div className='card m-2 cursor-pointer d-flex align-items-center' style={{width:300}} role='button' onClick={()=> navigate(`/product/${props.id}`)}>
         <div className='mt-4'>
